@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+*.svg
+*.Rproj
+cover.R
+fig2.R
+sites.csv
+slo.csv
+elev.csv
+OzoneExample.csv
