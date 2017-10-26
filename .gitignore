@@ -1,6 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+.gitignore
 *.svg
 *.Rproj
 cover.R
@@ -8,4 +9,8 @@ fig2.R
 sites.csv
 slo.csv
 elev.csv
+slo-elev.txt
+slo-elev2.txt
+sites-elev.txt
+Thumbs.db
 OzoneExample.csv

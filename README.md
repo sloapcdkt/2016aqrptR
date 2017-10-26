@@ -2,7 +2,7 @@
 Data and R code for graphs and analysis in 2016 Annual Air Quality Report for San Luis Obispo County.
 
 ## Details
-The 206 AQ Report is a product of the [San Luis Obispo County Air Pollution Control District](http://www.slocleanair.org/) and will be available on the District website [here](http://www.slocleanair.org/library/air-quality-reports.php) once finalized.
+The 2016 AQ Report is a product of the [San Luis Obispo County Air Pollution Control District](http://www.slocleanair.org/) and will be available on the District website [here](http://www.slocleanair.org/library/air-quality-reports.php) once finalized.
 
 ## Data Sources
 Almost all data used in the report were downloaded from EPA's [Air Quality System (AQS)](https://www.epa.gov/aqs). These raw data downloads are provided as `.txt` files. Data from California Department of Parks and Recreation's "S1" meteorology tower were obtained from their data management system, and is provided in the `.csv` files begining `vdv_`. The data in Tables 3 and 4 are from AQS AMP440 and AMP450 reports; these are provided as `.pdf` files.
