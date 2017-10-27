@@ -93,7 +93,7 @@ f2 <- function(site, main){
 
 
 
-svg("fig6.svg", width = 10.5, height = 8, 
+svg("fig6.svg", width = 10.5, height = 7.5, 
     pointsize = 10)
 
 par(mfrow = c(2, 4),
