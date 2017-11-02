@@ -266,6 +266,7 @@ rm(cos, hours, max.wd, min.wd, min.ws, pm, sin, vec, ws, a, id)
 # how many days do we have?
 length(unique(noprecip$day)) 
 
+noprecip$ratio <- noprecip$pm10.cdf/noprecip$ws.s1
 
 # calc summary
 noprecip %>% 
@@ -279,9 +280,8 @@ noprecip %>%
             max.wscdf=round(max(ws.cdf),1),
             mean.wsS1=round(mean(ws.s1),1),
             sd.wsS1=round(sd(ws.s1),1),
-            max.wsS1=round(max(ws.s1),1))-> overview.noprecip
-
-overview.noprecip$ratio<-with(overview.noprecip, mean.pm/mean.wsS1)
+            max.wsS1=round(max(ws.s1),1),
+            mean.ratio = round(mean(ratio), 1))-> overview.noprecip
 
 overview.noprecip # print data for table in Appendix
 
@@ -333,7 +333,7 @@ noprecip$year<-format(noprecip$date, "%Y")
 noprecip$ratio<-with(noprecip, pm10.cdf/ws.s1)
 
 ## doublecheck mean of ratios
-mean(noprecip$ratio[noprecip$year!=2015])
+mean(noprecip$ratio[noprecip$year < 2015])
 
 ## are the ratios gaussian?
 hist(noprecip$ratio, freq=F)   #close enough; actually tighter than gaussian
@@ -355,7 +355,6 @@ plot(m2)  ## looks OK
 
 # equal variance?
 var.test(noprecip$ratio[noprecip$year < 2015], noprecip$ratio[noprecip$year == 2015])
-
 
 ## is 2016 different from the pooled baseline years?
 m3<-lm(ratio~(year==2016), noprecip, subset = year != 2015)
